@@ -1,0 +1,8 @@
+GIT HUB
+
+git remote add origin git@github.com:Rusianeitor/hello-git.git
+git push -u origin main - subir los archivos de local a remoto
+git fetch - descarga el historia de cambios sin los cambios
+git pull - descarga el historia de cambios y los cambios
+git clone - descarga el proyecto para empezar
+git push - subir los cambios de local a remoto

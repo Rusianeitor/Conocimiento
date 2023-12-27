@@ -1,0 +1,35 @@
+GIT
+
+ls - listado de archivos
+cd Desktop - entrar a carpeta
+cd .. - salir de carpeta
+touch hellogit.py - crea un archivo python
+git init - crea el repositorio en una ruta
+git branch -m main - cambiar el nombre de la rama master a main
+git status - ver el status del repositorio
+git add hellogit-py - toma foto al archivo y lo guarda en stage
+git add . - añade todos los ficheros que están pendientes
+git commit -m "" - hace el commit y manda el mensaje
+git log - verificar los cambios en repo
+git log --graph - lo mismo de arriba pero cambia la visualización
+git log --graph --pretty=oneline - lo mismo de arriba pero cambia la visualización
+git log --graph --pretty=oneline --decorate --all --oneline - lo mismo de arriba pero cambia la visualización
+git checkout hellogit2.py - vuelve a la foto anterior
+git config --global alias.tree "log --graph --pretty=oneline --decorate --all --oneline" - crea un alias para resumir la línea
+git diff - ver los cambios que han pasado sin hacer commit
+git diff login - compara entre ramas
+git reset --hard 7a000d8 -- elimina los commit siguientes y se queda en el hash seleccionado
+git reflog - historial completo de interacciones que hicimos en el repo
+a4571d0
+git tag clase_1 - crea el tag clase_1 en el commit a donde está apuntando
+git tag - lista todos los tags
+git checkout tags/clase_1 - te mueve al tag seleccionado
+git branch login - crea una rama nuevo con nombre login
+git switch login - te mueve a la rama login
+git merge main -press i, write your merge message, press esc, write :wq
+git stash - commit temporal en el local que no afecta al árbol
+git stash list - lista los stash
+git stash pop - recupera lo que tenías cuando hiciste el stash
+git stash drop - elimina el stash guardado
+git branch -d login - elimina la rama login
+
