@@ -1,7 +1,0 @@
-Buscar Serenity REST
-Buscar apis y endpoint
-Buscar query params
-Buscar karate maven
-Buscar pruebas paralelo karate
-Buscar principios SOLID
-Buscar BDD
