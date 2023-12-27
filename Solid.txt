@@ -1,1 +1,17 @@
+Principios SOLID
 
+S - Single Responsibility Principle
+Una clase, componente o microservicio es responsable de una sola cosa	
+
+O - Open/Closed Principle
+Debe extender el comportamiento de una clase, función, método o módulo sin modificarlo
+
+L - Liskov Substitution Principle (LSP)
+Utilizar la herencia de forma correcta para tener un código mantenible en el tiempo
+
+I - Interface Segregation Principle
+Hacer interfaces específicas para un tipo de cliente
+Segregar interfaces para cada cliente
+
+D - Dependency Inversion Principle
+Las clases de alto nivel no deben depender de las de bajo nivel, deben depender de las abstracciones
