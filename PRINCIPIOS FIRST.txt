@@ -1,0 +1,9 @@
+PRINCIPIOS FIRST
+
+Fast - Rápido
+Independent - Independiente
+Repeat - Repetible
+Self-validating - Auto evaluable
+Timely - Oportuno
+
+

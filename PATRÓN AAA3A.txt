@@ -1,0 +1,19 @@
+PATRÓN AAA/3A
+
+Arrange - Act - Assert
+Organizar - Actuar - Verificar
+
+Patrón que indica como organizar escenarios y/o casos de prueba en 3 pasos
+
+1. Arrange: Organiza y prepara el sistema o los colaboradores para nuestra prueba
+	Suma suma=new Suma()
+	int resultadoObtenido;
+
+2. Act: Ejecuta el método o acción a probar
+	resultadoObtenido=suma.sumar(1,2)
+
+3. Assert: Verificar que el resultado obtenido sea el resultado esperado
+	Assert.assertEquals(3, resultadoObtenido)
+
+
+Reformulación -> Given-When-Then
