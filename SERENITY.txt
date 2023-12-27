@@ -4,4 +4,4 @@ SERENITY
 2. Instalar plugin Cucumber for Java (Pide instalar Gerkin)
 
 Crear feature
-Crear page
+Crear page?

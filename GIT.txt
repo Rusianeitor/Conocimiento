@@ -31,5 +31,5 @@ git stash - commit temporal en el local que no afecta al árbol
 git stash list - lista los stash
 git stash pop - recupera lo que tenías cuando hiciste el stash
 git stash drop - elimina el stash guardado
-git branch -d login - elimina la rama login
+git branch -d login - elimina la rama login 
 
