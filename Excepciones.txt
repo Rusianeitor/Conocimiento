@@ -1,0 +1,15 @@
+Cuando un metodo falla se lanza una excepción
+
+void metodo(){
+	! -> Exception que indica el estado del programa cuando ocurrió el error
+}
+
+Clase Throwable que se divide en:
+	Clase Error - Error en el JVM (máquina virtual de Java), No comprobada o unchecked
+	Clase Exception - Algo que hicimos mal, hay más de 80 excepciones clasificadas por Java
+
+Clase Exception que se divide en:
+	SQLException
+	I/OException
+	FileNotFoundException
+	RuntimeException - No comprobada o unchecked
