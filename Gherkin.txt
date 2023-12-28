@@ -1,5 +1,20 @@
 Gherkin
 
+@Given ("Yo tengo {int} libro(s)")                       Yo tengo 1 libro
+Public void yo_tengo_n_libros(Int libros) {..}           Yo tengo 50 libros
+
+@Given ("Yo tengo libro de color {string}")              Yo tengo libro de color "rojo"
+Public void yo_tengo_libro_color_n(String color) {..}    Yo tengo libro de color "<columna1>"
+
+@Given ("Yo tengo un libro/cuaderno")                    Yo tengo un libro
+Public void yo_tengo_libro_cuaderno() {..}               Yo tengo un cuaderno
+
+@Given  ("/^Yo \"([^\"]*)\"un libro$/")                  Yo "compro" un libro
+Public void yo_accion_un_libro(String accion){..}        Yo "<columna1>" un libro
+
+@Given (“Envio un datatable")                            
+Public void envio_un_datatable(DataTable dataTabla){..}
+
 Palabras clave principales:
 Feature
 Background
@@ -13,7 +28,6 @@ Palabras clave secundarias:
 |   - Tabla de datos
 @   - Etiquetas
 #   - Comentarios
-
 
 1. Feature (Característica): 
     Contener un título referente de alto nivel que agrupe escenarios relacionados
@@ -34,19 +48,3 @@ Palabras clave secundarias:
     Escribir escenarios lo más independientes posibles
     Escribir escenarios cuando el estilo imperativo cuando los interesados tienen interés en constatar los valores usados en el escenario 
     Escribir escenarios cuando el estilo declarativo cuando los interesados solo requieren un entendimiento a alto nivel para una audiencia con menor nivel técnico
-
-Cucumber:
-    @Given ("Yo tengo {int} libro(s)")                       Yo tengo 1 libro
-    Public void yo_tengo_n_libros(Int libros) {..}           Yo tengo 50 libros
-
-    @Given ("Yo tengo libro de color {string}")              Yo tengo libro de color "rojo"
-    Public void yo_tengo_libro_color_n(String color) {..}    Yo tengo libro de color "<columna1>"
-
-    @Given ("Yo tengo un libro/cuaderno")                    Yo tengo un libro
-    Public void yo_tengo_libro_cuaderno() {..}               Yo tengo un cuaderno
-
-    @Given  ("/^Yo \"([^\"]*)\"un libro$/")                  Yo "compro" un libro
-    Public void yo_accion_un_libro(String accion){..}        Yo "<columna1>" un libro
-
-    @Given (“Envio un datatable")                            
-    Public void envio_un_datatable(DataTable dataTabla){..}
