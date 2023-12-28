@@ -1,0 +1,52 @@
+Gherkin
+
+Palabras clave principales:
+Feature
+Background
+Given, When, Then, And, But y *
+Scenario Outline o Scenario Template
+Examples
+Rule
+
+Palabras clave secundarias:
+""" - Doc string
+|   - Tabla de datos
+@   - Etiquetas
+#   - Comentarios
+
+
+1. Feature (Característica): 
+    Contener un título referente de alto nivel que agrupe escenarios relacionados
+    Como ... Quiero ... Para ...
+
+2. Escenario:
+    Background: Título breve, compuesto por pasos
+        Usos: Login, Navegación principal, navegación hacia una pestaña recurrente antes de hacer los pasos de la prueba
+    Dado que [Actor/Objeto] [Estado/Acción inicial] [Tipo Objeto(Opc)] [Nombre Objeto(Opc)] [Contexto(Opc)]
+    Cuando [Actor] [Acción] [Tipo Objeto] [Nombre Objeto] [Contexto(Opc)]
+    Entonces [Tipo Objeto] [Nombre Objeto] [Resultado/Valor/Validación esperada] [Contexto(Opc)]
+    Y 
+    Pero 
+
+3. Consideraciones:
+    Los features deben probar partes o funcionalidades de una app 
+    Usar el mismo idioma que los clientes
+    Escribir escenarios lo más independientes posibles
+    Escribir escenarios cuando el estilo imperativo cuando los interesados tienen interés en constatar los valores usados en el escenario 
+    Escribir escenarios cuando el estilo declarativo cuando los interesados solo requieren un entendimiento a alto nivel para una audiencia con menor nivel técnico
+
+Cucumber:
+    @Given ("Yo tengo {int} libro(s)")                       Yo tengo 1 libro
+    Public void yo_tengo_n_libros(Int libros) {..}           Yo tengo 50 libros
+
+    @Given ("Yo tengo libro de color {string}")              Yo tengo libro de color "rojo"
+    Public void yo_tengo_libro_color_n(String color) {..}    Yo tengo libro de color "<columna1>"
+
+    @Given ("Yo tengo un libro/cuaderno")                    Yo tengo un libro
+    Public void yo_tengo_libro_cuaderno() {..}               Yo tengo un cuaderno
+
+    @Given  ("/^Yo \"([^\"]*)\"un libro$/")                  Yo "compro" un libro
+    Public void yo_accion_un_libro(String accion){..}        Yo "<columna1>" un libro
+
+    @Given (“Envio un datatable")                            
+    Public void envio_un_datatable(DataTable dataTabla){..}
