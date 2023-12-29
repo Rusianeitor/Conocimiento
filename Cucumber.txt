@@ -1,0 +1,43 @@
+Step Definition: 
+ Método que tiene una expresión vinculante a uno o más pasos Gherkin
+ @Given("I have {int} cukes in my belly")
+ public void i_have_n_cukes_in_my_belly(int cukes) {...}
+
+Step Arguments: 
+ Data Tables: Se pasan cómo último parámetro en la definición de un paso, pasa como un List<String>
+    *.feature
+    Given the following animals:
+    | cow   |
+    | horse |
+    | sheep |
+
+    *.java
+    @Given("the following animals:")
+    public void the_following_animals(List<String> animals) {...}
+
+Tags o Etiquetas:
+ Ejecuta subconjunto de escenarios o restringe los enlaces a un subconjunto de escenarios
+ @billing @bicker @annoy
+ Feature: Verify billing
+
+ @important
+ Scenario: Missing product description
+   Given hello
+
+ Scenario: Several products
+   Given hello
+
+ Ejecución por consola:
+ mvn test -Dcucumber.filter.tags="@smoke and @fast"
+
+ Ejecución por ide:
+  @CucumberOptions(tags = "@smoke and @fast")
+  public class RunCucumberTest {}
+
+  @CucumberOptions(tags = "not @smoke")
+  public class RunCucumberTest {}
+
+Cucumber Expressions:
+ Given
+  I have 42 cucumbers in my belly
+  I have {int} cucumbers in my belly

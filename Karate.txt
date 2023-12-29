@@ -18,6 +18,7 @@ https://github.com/karatelabs/karate
 https://github.com/karatelabs/karate#fuzzy-matching
 
 Pasos Gradle:
+#https://www.cleveritgroup.com/blog/api-testing-con-karatedsl
 1. Ingresar al archivo build.gradle para configurar
 2. Crear el package en la carpeta test
 3. Crear karate-config.js por ambiente
@@ -36,3 +37,49 @@ Pasos Gradle:
 	Ejecutar gradle test --tests ParallelTests -Dkarate.env=preproductive -Duser=karate -DBaseUrl=http://api.geonames.org/ -i
 
 ./gradlew test --tests ParallelTests -Denv=preproductive -Duser=karate -DbaseUrl=http://api.geonames.org/ -i
+
+Pasos Maven: https://github.com/karatelabs/karate?tab=readme-ov-file#maven
+1. Ingresar al pom.xml para configurar
+	Agregar dependencias junit
+	Agregar test resource de folder structure
+	Agregar plugin maven-surefire
+2. Crear archivo Runner en el package Test
+	@Karate.Test
+    Karate karateTest() {
+        return Karate.run("classpath:{nombreFeature}.feature");
+    }
+3. Crear archivo logback.test.xml
+	Extraer data de la sección Login de Karate
+3. Crear feature
+	Background:
+     * url 'https://reqres.in/api'
+
+	Scenario: Obteniendo un usuario
+     * path 'users/2'
+     When method GET
+     Then status 200
+     And match response.data.email == 'janet.weaver@reqres.in'
+
+  	Scenario: Creando un usuario
+     * path 'users'
+     When request {"name": "morpheus","job": "leader"}
+	 When request
+     """
+      {
+        "name": "morpheus",
+        "job": "leader"
+      }
+     """
+     And method POST
+     Then status 201
+4. Parametrizar datos
+  Desde json
+  {
+    "name": '#(vName)',
+    "job": "#(vJob)"
+  }
+5. Ejecutar features
+  Ejecución desde consola
+  mvn -test //testea las dependencias de maven
+   mvn clean test -Dtest=SuperRunner //clean hace limpieza y luego con test descarga
+  

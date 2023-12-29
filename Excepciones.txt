@@ -13,3 +13,5 @@ Clase Exception que se divide en:
 	I/OException
 	FileNotFoundException
 	RuntimeException - No comprobada o unchecked
+
+throws new RuntimeException("Error x") - Cierra nav e imprime el mensaje en consola
